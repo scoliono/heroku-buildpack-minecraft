@@ -2,11 +2,11 @@
 
 if [ -n "$SFTP_IP" ]; then
   if [ -d world ]; then
-    scp -r world/ ${SFTP_USER}@${SFTP_IP}:${SFTP_PATH}/world/
+    scp -i ${SFTP_KEYPATH} -r world/ ${SFTP_USER}@${SFTP_IP}:${SFTP_PATH}/world/
   else
     mkdir -p world
     cd world
-    scp -r ${SFTP_USER}@${SFTP_IP}:${SFTP_PATH}/world/ world/
+    scp -i ${SFTP_KEYPATH} -r ${SFTP_USER}@${SFTP_IP}:${SFTP_PATH}/world/ world/
     cd ..
   fi
   rm .s3cfg
