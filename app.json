@@ -30,7 +30,7 @@
     "SFTP_KEYPATH": {
       "description": "Path to SSH key for SFTP login",
       "required": false
-    }
+    },
     "SFTP_SYNC": {
       "description": "How often (in seconds) the Minecraft world is synced to SFTP. Default: 60",
       "required": false
