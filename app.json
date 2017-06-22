@@ -15,16 +15,24 @@
       "description": "Your personal ngrok API token",
       "required": true
     },
-    "AWS_BUCKET": {
-      "description": "S3 Bucket to store your server state (you will lose your games when the server restarts if you don't do this)",
+    "SFTP_IP": {
+      "description": "IP to an SFTP server to store your server state (you will lose your games when the server restarts if you don't do this)",
       "required": false
     },
-    "AWS_ACCESS_KEY": {
-      "description": "The AWS access key for the S3 Bucket",
+    "SFTP_USER": {
+      "description": "Username for SFTP server",
       "required": false
     },
-    "AWS_SECRET_KEY": {
-      "description": "The AWS secret key for the S3 Bucket",
+    "SFTP_PATH": {
+      "description": "Filepath to root directory of Minecraft server",
+      "required": false
+    },
+    "SFTP_KEYPATH": {
+      "description": "Path to SSH key for SFTP login",
+      "required": false
+    }
+    "SFTP_SYNC": {
+      "description": "How often (in seconds) the Minecraft world is synced to SFTP. Default: 60",
       "required": false
     }
   },
